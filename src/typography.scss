@@ -1,0 +1,40 @@
+
+@font-face {
+    font-family: "IBM EGA 8x14";
+    src: url('fonts/Web437_IBM_EGA_8x14.woff');
+}
+
+@font-face {
+    font-family: "IBM Model3x Alt2";
+    src: url('fonts/Web437_IBM_Model3x_Alt2.woff');
+}
+
+.font-ibm-ega {
+    font-family: 'IBM EGA 8x14', monospace;
+    font-size: calc(14px * 1.2);
+}
+
+.font-ibm-model3x {
+    font-family: 'IBM Model3x Alt2', monospace;
+    font-size: calc(14px * 1.2);
+}
+
+@for $i from 1 through 9 {
+    $weight: $i * 100;
+
+    .font-sour-gummy-#{$weight} {
+        font-family: "Sour Gummy", serif;
+        font-optical-sizing: auto;
+        font-weight: #{$weight};
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+
+    .font-lexend-#{$weight} {
+        font-family: "Lexend", serif;
+        font-optical-sizing: auto;
+        font-weight: #{$weight};
+        font-style: normal;
+    }
+}
